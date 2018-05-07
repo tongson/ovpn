@@ -3,7 +3,7 @@ OpenVPN setup script
 
 Only tested on OpenSUSE Tumbleweed
 
-To build requires the pattern: devel_C_C++
+To build requires the pattern: devel_C_C++<br/>
 Requires the packages: openvpn openvpn-auth-pam-plugin google-authenticator-libpam easyrsa
 
 
