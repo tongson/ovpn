@@ -21,7 +21,7 @@ topology subnet\
 server ${NETWORK}\
 ifconfig-pool-persist ipp.txt\
 push \"dhcp-option DNS ${NAMESERVER}\"\
-push \"redirect-gateway def1 bypass-dhcp\"\
+push \"redirect-gateway def1 block-local\"\
 crl-verify crl.pem\
 ca ca.crt\
 cert ${SERVER-NAME}.crt\
