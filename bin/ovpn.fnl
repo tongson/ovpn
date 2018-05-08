@@ -150,7 +150,7 @@ account required pam_permit.so")
   (cmd.rm ["-f" "/etc/openvpn/crl.pem"])
   (cmd.cp ["/etc/openvpn/easy-rsa/pki/crl.pem" "/etc/openvpn/crl.pem"])
   (cmd.chmod ["644" "/etc/openvpn/crl.pem"])
-  (file.write (.. EASYRSA-DIR "/pki/index.txt") (table.concat (table.filter (file.to_array (.. EASYRSA-DIR "/pki/index.txt")) (.. "CN=" (. arg 2)) true) "\n"))
+  (file.write (.. EASYRSA-DIR "/pki/index.txt") (table.concat (table.filter (file.to_array (.. EASYRSA-DIR "/pki/index.txt")) (.. "CN=" (. arg 2)) true)))
   (os.exit 0))
 
 (try (easyrsa "build-client-full" CLIENT "nopass") "[!] build-client-full failed\n")
